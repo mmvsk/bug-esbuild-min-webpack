@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "lib": ["dom", "ES2016"],
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noEmit": true
+  },
+  "include": ["*.ts"]
+}

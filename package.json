@@ -1,0 +1,14 @@
+{
+	"type": "module",
+	"scripts": {
+		"build-lib-min": "esbuild lib/test.ts --target=es2019 --format=esm --bundle --minify --outdir=./lib/dist --out-extension:.js=.mjs",
+		"build-lib": "esbuild lib/test.ts --target=es2019 --format=esm --bundle --outdir=./lib/dist --out-extension:.js=.mjs",
+		"build-app": "webpack --config ./webpack.config.js",
+		"test": "yarn run build-lib-min && yarn run build-app && node dist/bundle.js"
+	},
+	"devDependencies": {
+		"esbuild": "^0.19.4",
+		"webpack": "^5.88.2",
+		"webpack-cli": "^5.1.4"
+	}
+}
